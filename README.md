@@ -10,7 +10,7 @@
 **App Title:** 
 - League of Legends Champions List
 
-App Description: 
+**App Description:** 
 - The LoLCL will display images of all LoL champions in a single page. 
 - Each images is clickable to load and open up a new page displaying that champions 1. Image 2.Name 3. Brief description
 
