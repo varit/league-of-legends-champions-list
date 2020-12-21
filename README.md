@@ -1,23 +1,17 @@
 
-| Project 1 Important Dates | Day      | Date       |
-|---------------------------|---       |---         |
-| Project Prompt Delivered  | Friday   | 12/17/2020 |
-| Project Pitches           | Monday  | 12/21/2020 |
-| Project Deployment        | Tuesday  | 1/05/2021 |
-| Project Presentations     | Tuesday  | 1/05/2021 |
+# Project Overview
 
+## Project Name
+League of Legends Champions List
 
-**App Title:** 
-- League of Legends Champions List
-
-**App Description:** 
+## Project Description
 - The LoLCL will display images of all LoL champions in a single page. 
 - Each images is clickable to load and open up a new page displaying that champions 1. Image 2.Name 3. Brief description
 
-**APIs:**
+## API:
 - http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion.json
 
-**API Snippet:**
+## API Snippet
 
     "type": "champion",
     "format": "standAloneComplex",
@@ -44,18 +38,19 @@
                 "y": 0,
                 "w": 48,
                 "h": 48
-**Wireframes:**
+## Wireframes
+
 ![Desktop Wireframe](https://i.imgur.com/EgfkKBV.png)
 
 ![Mobile Wireframe](https://i.imgur.com/MTaC9Z8.png)
 
-MVP:
+## MVP
 - Search bar for champions name
 - Champions Image (original skin)
 - Champions Name
 - Champions Description
 
-**Post-MVP:**
+## Post-MVP
 - Fine tune CSS
 - Autocomplete search bar
 - Champions (additional) Skins 
@@ -63,19 +58,19 @@ MVP:
 - Ally tips
 - Enemy tips
 
-**Goals:**
+## Project Schedule
 
-*Week 1(MVP):*
+### Week 1(MVP)
 
 Monday: 
 - HTML setup (Desktop)
 - Basic CSS setup (Desktop)
-- DOM setup (Desktop)
+- JavaScript setup (Desktop)
 
 Tuesday: 
 - Implement API 
-- Test search functionality
-- Test page navigation
+- Test(Phase 1) search functionality
+- Test(Phase 2) page navigation
 
 Wednesday:
 - CSS setup (Tablet and mobile)
@@ -84,25 +79,48 @@ Thursday:
 - CSS setup con (Tablet and mobile)
 
 Friday:
-- Fine tune
+- Buffer
+
 Saturday: N/A
 Sunday: N/A
 
-*Week 2(Post MVP):*
+### Week 2(Post MVP)
 - Advanced CSS
 - Autocomplete search bar
 - Add extra data
 
-**Priority Matrix:**
+|  Day | Deliverable | Status
+|---|---| ---|
+|Dec 18| Wireframes / Priority Matrix / Timeframes | Incomplete
+|Dec 21| Project Approval / HTML Setup / Basic CSS Setup | Incomplete
+|Dec 22| API Implementation / Test(Phase 1) Search Functionality / Test(Phase 2) Page Navigation | Incomplete
+|Dec 23| CSS Setup (Tablet and Mobile) | Incomplete
+|Dec 24| CSS Setup con (Tablet and mobile) | Incomplete
+|Dec 25| Fine Tune CSS | Incomplete
+|Jan 4| MVP | Incomplete
+|Jan 5| Presentations | Incomplete
+
+## Priority Matrix
 
 ![Priority Matrix](https://i.imgur.com/OfOKV3E.png)
 
-**Timeframes:**
-- HTML + DOM, 3-6 hrs
-- Basic CSS, 3 hrs
-- Implement API, 6-9 hrs
-- Test search and page navigation, < 3 hrs
-- CSS (Tablet and mobile), 3-6 hrs
-- Fine tune, 6+ hrs
+## Timeframes
 
-**Total:** 27-35+ hrs
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| HTML + JavaScript | M | 3-6hrs| N/A | N/A |
+| Basic CSS | M | 3hrs| N/A | N/A |
+| API Implementation | H | 6-9hrs| N/A | N/A |
+| Test(Phase 1 + Phase 2) | H | 3hrs| N/A | N/A |
+| CSS (Tablet and mobile) | L | 3hrs| N/A | N/A |
+| Advanced CSS | L | 6-9+ hrs| N/A | N/A |
+| Total | N/A | 27-35+ hrs| N/A | N/A |
+
+
+## Code Snippet
+
+N/A
+
+## Change Log
+
+N/A
