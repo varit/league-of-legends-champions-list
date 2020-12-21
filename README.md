@@ -45,7 +45,7 @@
                 "w": 48,
                 "h": 48
 **Wireframes:**
-- https://imgur.com/a/Y34HlMT
+- ![Wireframes](https://imgur.com/a/Y34HlMT)
 
 MVP:
 - Search bar for champions name
@@ -93,7 +93,7 @@ Sunday: N/A
 
 **Priority Matrix:**
 
-https://imgur.com/a/eTe5KJL
+![Priority Matrix](https://imgur.com/a/eTe5KJL)
 
 **Timeframes:**
 - HTML + DOM, 3-6 hrs
