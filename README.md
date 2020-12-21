@@ -2,7 +2,7 @@
 # Project Overview
 
 ## Project Name
-League of Legends Champions List
+League of Legends Champions List (LoLCL)
 
 ## Project Description
 - The LoLCL will display images of all LoL champions in a single page. 
