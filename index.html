@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -10,8 +11,8 @@
     <!-- Start Navbar -->
     <header>
         <ul>
-            <li>LEAGUE OF LEGENDS <br> CHAMPIONS LIST</li>
-            <li>GitHub</li>
+            <li><a class="navLinks" href="../index.html">LEAGUE OF LEGENDS <br> CHAMPIONS LIST</a></li>
+            <li ><a class="navLinks" href="https://github.com/varit" target="_blank">GitHub</a></li>
         </ul>
     </header>
     <!-- End Navbar -->
@@ -19,8 +20,8 @@
     <div class="content">
         <!-- Start Search bar -->
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <img id="search-icon" src="./asset/icons/search icon.svg" alt="Search icon">
+            <input id="search-input" type="text" placeholder="Search...">
+            <button class="button" type="submit"><img id="search-icon" src="./asset/icons/search icon.svg" alt="Search icon"></button>
 
         </div>
         <!-- End Search bar -->
