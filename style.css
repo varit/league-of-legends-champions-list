@@ -14,7 +14,12 @@ body {
 .content {
     flex: 1 0 auto; 
 }
-
+a {
+    text-decoration: none;
+}
+.navLinks {
+    color: white;
+}
 ul {
     margin: 0;
     padding: 15px 150px 15px 150px;
@@ -46,8 +51,20 @@ input:focus {
 }
 #search-icon {
     width: 20px;
-
-
+}
+.search-bar:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgb(200, 200, 200);
+}
+.button {
+    border: none;
+    background-color: transparent;
+}
+.button:focus {
+    outline: none;
+}
+.button:hover {
+    cursor: pointer;
 }
 .footer {
     display: flex;
@@ -58,6 +75,7 @@ input:focus {
     padding: 30px;
     background-color: #2699FB;
 }
+
 
 /* .test {
     display: flex;
