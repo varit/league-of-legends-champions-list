@@ -92,8 +92,8 @@ Sunday: N/A
 |  Day | Deliverable | Status
 |---|---| ---|
 |Dec 18| Wireframes / Priority Matrix / Timeframes | Complete
-|Dec 21| Project Approval / HTML Setup / Basic CSS Setup | In-Progress
-|Dec 22| API Implementation / Test(Phase 1) Search Functionality / Test(Phase 2) Page Navigation | Incomplete
+|Dec 21| Project Approval / HTML Setup / Basic CSS Setup | Complete
+|Dec 22| API Implementation / Test(Phase 1) Search Functionality / Test(Phase 2) Page Navigation | In Progress
 |Dec 23| CSS Setup (Tablet and Mobile) | Incomplete
 |Dec 24| CSS Setup con (Tablet and mobile) | Incomplete
 |Dec 25| Fine Tune CSS | Incomplete
