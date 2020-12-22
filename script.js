@@ -17,33 +17,40 @@ async function getChampsData(champsName){
     } catch(error){
         console.log(error);
     }
-}
+};
 
 async function getAllChamps(){
     const champsUrl = `http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion.json`;
     try {
         const response = await axios.get(champsUrl);
-        // console.log(response.data.data);
-        // let allChamps = response.data.data;
-        // console.log(renderChamps);
-         renderChamps(response.data.data);
+        console.log("Response Data ",response);
+        let objNames = response.data.data;
+        // console.log(repsponse.data);
+        getName(objNames);
+        // renderChamps(response.data.data);
     } catch(error){
         console.log(error);
     }
-}
+};
 getAllChamps();
 
-function renderChamps(allChamps){
-    // let arr = allChamps;
-    // let arr =[2,3,4,5];
+
+function getName(objNames){
+    console.log("allChamps: ",objNames);
+    let arrOfNames = Object.keys(objNames);
     let list = document.querySelector(".champions-container");
-    // console.log(list);
-    allChamps.forEach((allChamps) => {
+    arrOfNames.forEach((name) => {
         let champsDiv = document.createElement("div");
         champsDiv.innerHTML = `
-        <h1>${allChamps}</h1>`
+        <div>${name}</div>`
         list.appendChild(champsDiv);
-    })
+        getImage(objNames, name);
+    });
+    
 }
 
-renderChamps();
+function getImage(objNames,name){
+    console.log("Images: ",objNames[name].image.full);
+
+
+}
