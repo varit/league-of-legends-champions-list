@@ -14,6 +14,9 @@ body {
 .content {
     flex: 1 0 auto; 
 }
+h2 {
+    color: darkgray;
+}
 a {
     text-decoration: none;
 }
@@ -79,7 +82,7 @@ input:focus {
 .champions-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0px 250px 0px 250px;
     text-align: center;
 }
@@ -89,16 +92,12 @@ input:focus {
 }
 
 .champs-image {
-    max-width: 250px;
-    max-height: 282px;
+    max-width: 450px;
+    max-height: 482px;
     width: auto;
     height: auto;
 }
 
-/* h2{
-    position: absolute;
-
-} */
 /* .test {
     display: flex;
     justify-content: center;
