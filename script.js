@@ -23,7 +23,7 @@ async function getAllChamps(){
     const champsUrl = `http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion.json`;
     try {
         const response = await axios.get(champsUrl);
-        console.log("Response Data ",response);
+        // console.log("Response Data ",response);
         let objNames = response.data.data;
         // console.log(repsponse.data);
         getName(objNames);
@@ -36,21 +36,52 @@ getAllChamps();
 
 
 function getName(objNames){
-    console.log("allChamps: ",objNames);
-    let arrOfNames = Object.keys(objNames);
+    // console.log("allChamps: ",objNames);
     let list = document.querySelector(".champions-container");
-    arrOfNames.forEach((name) => {
+    for(const property in objNames){
+       let champsName = property;
+       console.log(`${champsName}`)
+    //    console.log(`${property}`)
+        let champsImage = objNames[property].image.full;
+       console.log(champsImage)
+    //    console.log(objNames[property].image.full)
+
         let champsDiv = document.createElement("div");
+        champsDiv.setAttribute("class", "champs-box");
         champsDiv.innerHTML = `
-        <div>${name}</div>`
+        <div>${champsImage}<div>${champsName}</div></div>
+        `
         list.appendChild(champsDiv);
-        getImage(objNames, name);
-    });
+
+   }
+   
+   
+   
+    // let arrOfNames = Object.keys(objNames);
+    // let list = document.querySelector(".champions-container");
+    // arrOfNames.forEach((name) => {
+    //     let champsDiv = document.createElement("div");
+    //     champsDiv.setAttribute("class", "name-divs");
+    //     champsDiv.innerHTML = `
+    //     <div>${name}</div>`
+    //     list.appendChild(champsDiv);
+    //     getImage(objNames, name);
+    // });
     
 }
 
-function getImage(objNames,name){
-    console.log("Images: ",objNames[name].image.full);
+// function getImage(objNames, name){
+//     let image = objNames[name].image.full;
+//     // console.log("Images: ",image);
+ 
+    
 
-
-}
+    
+    
+//     let list = document.querySelector(".champions-container");
+//     let champsDiv = document.createElement("div");
+//     champsDiv.setAttribute("class", "image-divs");
+//     champsDiv.innerHTML = `
+//     <div>${image}</div>`
+//     list.appendChild(champsDiv);
+// }
