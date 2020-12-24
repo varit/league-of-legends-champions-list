@@ -32,7 +32,7 @@ async function getChampsData(champsName){
 function displayChamp(champsImage, champsName, champsLore){
     let champsContainer = document.querySelector(".champions-container");
     let champsDiv = document.createElement("div");
-    champsDiv.setAttribute("class", "champs-box");
+    champsDiv.setAttribute("class", "champs-box-single");
     champsDiv.innerHTML = `
     <img class="single-champs-image" src="asset/splash/${champsImage}" alt="Image of ${champsName}"><div><h2>${champsName}</h2></div><div>${champsLore}</div>
     `
@@ -68,7 +68,7 @@ function getAllNames(objNames){
         let champsDiv = document.createElement("div");
         champsDiv.setAttribute("class", "champs-box");
         champsDiv.innerHTML = `
-        <img class="${champsNameLowerCase}" src="asset/loading/${champsImage}" alt="Image of ${champsName}"><h2>${champsName}</h2>
+        <div class="zoom"><img class="${champsName}" src="asset/loading/${champsImage}" alt="Image of ${champsName}"><h2 class="champImg">${champsName}</h2></div>
         `
         list.appendChild(champsDiv);
         
