@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 body {
@@ -15,23 +16,58 @@ body {
 h2 {
     color: rgb(255, 255, 255);
 }
+.champsTitle {
+    font-size: 50px;
+    color: black;
+}
+.champsLore {
+    margin: 50px;
+}
 a {
     text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding-right: 20px;
+    
 }
-.navLinks {
-    color: white;
+header {
+    z-index: 1;
 }
+.stick-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.stick-header + .content {
+    padding-top: 100px;
+}
+
+.hamburger {
+    position: fixed;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    display: none;
+    
+}
+.nav-social {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 ul {
     margin: 0;
+    min-height: 100px;
     padding: 15px 150px 15px 150px;
     display: flex;
     text-align: center;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     list-style-type: none;
     border-width: 100%; 
     color: rgb(255, 255, 255);
     background-color: #2699FB;
+    font-size: 20px;
 }
 input {
     border: none;
@@ -77,12 +113,9 @@ input:focus {
     background-color: #2699FB;
 }
 .champImg {
-    position: absolute;
     width: 308px;
     height: 35px;
-    margin-top: -40px;
-    padding: 2px;
-    border: none;
+    margin-top: -30px;
     background-color: #2699FB;
 
 }
@@ -91,7 +124,7 @@ input:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 0px 250px 0px 250px;
+    margin: 20px calc(10% - 30px);
     text-align: center;
 }
 
@@ -107,23 +140,16 @@ input:focus {
 .zoom {
     width: 100%;
     height: 100%;
-    /* margin: -20px; */
 }
 .champs-box {
-    border-radius: 0 150px 0 0;
+    border-radius: 0 150px 0 90px;
+
  
 }
 .champs-box:hover {
     transition-duration: 1s;
     border-radius: 0;
 }
-/* .champs-box:hover {
-    transition-duration: 500ms;
-    border-radius: 0 150px 0 0;;
-}
-.champs-box {
-    border-radius: 0;
-} */
 
 .champs-box:hover .zoom,
 .champs-box:focus .zoom {
@@ -131,6 +157,41 @@ input:focus {
     transition-duration: 500ms;
 }
 
-/* .champs-box:hover .champImg{
-    background-color: #2698fba2;
-} */
+
+@media screen and (max-width: 1024px){
+    .top-nav {
+        position: relative;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    .nav-social {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin: 100px 0 20px 0;
+    }
+    .nav-social a {
+  
+        border-bottom: 1px solid currentColor;
+        padding-right: 0;
+    }
+    li {
+        padding-bottom: 15px;
+    }
+    .nav-social.show {
+        display: block;
+    }
+    .nav-logo {
+        position: absolute;
+        top: 30px;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+
+    }
+}

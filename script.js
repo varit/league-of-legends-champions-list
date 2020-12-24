@@ -1,6 +1,27 @@
 const input = document.querySelector("#search-input");
 const button = document.querySelector("button");
+const hamburger = document.querySelector(".hamburger");
+const navSocial = document.getElementById("nav-social");
 
+
+window.onscroll = function() {
+    stickHeader();
+}
+const header = document.querySelector("header")
+
+let sticky = header.offsetTop;
+
+function stickHeader(){
+    if(window.pageYOffset > sticky){
+        header.classList.add("stick-header");
+    } else {
+        header.classList.remove("stick-header");
+    } 
+
+}
+hamburger.addEventListener("click", (e) => {
+    navSocial.classList.toggle("show");
+});
 
 button.addEventListener("click",(e) =>{
     e.preventDefault();
@@ -10,7 +31,7 @@ button.addEventListener("click",(e) =>{
     champsName = capName;  
     getChampsData(champsName);
     removeChamps();
-})
+});
 
 async function getChampsData(champsName){
     const champsUrl = `http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion/${champsName}.json`;
@@ -34,7 +55,7 @@ function displayChamp(champsImage, champsName, champsLore){
     let champsDiv = document.createElement("div");
     champsDiv.setAttribute("class", "champs-box-single");
     champsDiv.innerHTML = `
-    <img class="single-champs-image" src="asset/splash/${champsImage}" alt="Image of ${champsName}"><div><h2>${champsName}</h2></div><div>${champsLore}</div>
+    <img class="single-champs-image" src="asset/splash/${champsImage}" alt="Image of ${champsName}"><div><h2 class="champsTitle">${champsName}</h2></div><div class="champsLore">${champsLore}</div>
     `
     champsContainer.appendChild(champsDiv);
 }
@@ -93,4 +114,3 @@ function removeChamps(){
         removeChamps.removeChild(removeChamps.lastChild);
     }
 }
-
