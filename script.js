@@ -1,8 +1,8 @@
 const input = document.querySelector("#search-input");
 const button = document.querySelector("button");
 const hamburger = document.querySelector(".hamburger");
+const navLogo =document.getElementById("nav-logo");
 const navSocial = document.getElementById("nav-social");
-
 
 window.onscroll = function() {
     stickHeader();
@@ -20,6 +20,7 @@ function stickHeader(){
 
 }
 hamburger.addEventListener("click", (e) => {
+    navLogo.classList.toggle("show");
     navSocial.classList.toggle("show");
 });
 
@@ -55,7 +56,7 @@ function displayChamp(champsImage, champsName, champsLore){
     let champsDiv = document.createElement("div");
     champsDiv.setAttribute("class", "champs-box-single");
     champsDiv.innerHTML = `
-    <img class="single-champs-image" src="asset/splash/${champsImage}" alt="Image of ${champsName}"><div><h2 class="champsTitle">${champsName}</h2></div><div class="champsLore">${champsLore}</div>
+    <img class="single-champs-image" src="asset/splash/${champsImage}" alt="Image of ${champsName}"><div><h2 class="champs-title">${champsName}</h2></div><div class="champs-lore">${champsLore}</div>
     `
     champsContainer.appendChild(champsDiv);
 }
@@ -81,11 +82,9 @@ function getAllNames(objNames){
 
         const dotJpeg = "_0.jpg";
         let champsName = property;
-        let champsNameLowerCase = champsName.toLowerCase();
         let champsImage = objNames[property].image.full;
         champsImage = champsImage.substring(0, champsImage.length -4);
         champsImage = champsImage.concat(dotJpeg);
-        
         let champsDiv = document.createElement("div");
         champsDiv.setAttribute("class", "champs-box");
         champsDiv.innerHTML = `
@@ -93,6 +92,7 @@ function getAllNames(objNames){
         `
         list.appendChild(champsDiv);
         
+        autocomplete(champsName);
     }
     let champsBox = document.querySelectorAll(".champs-box img");
         champsBox.forEach((champsBox) => {
@@ -113,4 +113,10 @@ function removeChamps(){
     while(removeChamps.lastChild){
         removeChamps.removeChild(removeChamps.lastChild);
     }
+}
+
+let names = [];
+function autocomplete(allNames) {
+    names.push(allNames);
+    console.log(names)
 }
