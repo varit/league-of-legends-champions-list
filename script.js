@@ -92,7 +92,7 @@ function getAllNames(objNames){
         `
         list.appendChild(champsDiv);
         
-        autocomplete(champsName);
+
     }
     let champsBox = document.querySelectorAll(".champs-box img");
         champsBox.forEach((champsBox) => {
@@ -113,10 +113,4 @@ function removeChamps(){
     while(removeChamps.lastChild){
         removeChamps.removeChild(removeChamps.lastChild);
     }
-}
-
-let names = [];
-function autocomplete(allNames) {
-    names.push(allNames);
-    console.log(names)
 }
