@@ -9,8 +9,7 @@ const navLogo =document.getElementById("nav-logo");
 const navSocial = document.getElementById("nav-social");
 
 
-newContainer.addEventListener("click", (e) => {
-    // console.log(e.target.value);
+newContainer.addEventListener("click", (e) =>{
     let selectSearch = e.target.value;
     getChampsData(selectSearch);
     removeChamps();
@@ -27,9 +26,9 @@ searchBar.addEventListener("click",(e) => {
     searchBar.classList.toggle("search-bar-extend");
     searchBar.classList.toggle("static-shadow");
     newContainer.classList.toggle("show");
-    // searchBar.classList.toggle("dropdown");
-    // searchBar.classList.toggle("dropdown-content");
+    e.stopPropagation();
     getOptions();
+
 })
 button.addEventListener("click",(e) =>{
     e.preventDefault();
@@ -40,6 +39,26 @@ button.addEventListener("click",(e) =>{
     getChampsData(champsName);
     removeChamps();
 });
+input.addEventListener("keyup",(e) =>{
+    if(e.keyCode === 13){
+        e.preventDefault();
+        let inputText = input.value;
+        let capName = inputText.charAt(0).toUpperCase() + inputText.slice(1);
+        
+        champsName = capName;  
+        getChampsData(champsName);
+        removeChamps();
+    }
+});
+input.addEventListener("keyup", (e) => {
+    filterSearch();
+})
+
+body.addEventListener("click",(e) => {
+    searchBar.classList.remove("search-bar-extend");
+    searchBar.classList.remove("static-shadow");
+    newContainer.classList.remove("show");
+})
 hamburger.addEventListener("click", (e) => {
     navLogo.classList.toggle("show");
     navSocial.classList.toggle("show");
@@ -149,6 +168,21 @@ function getOptions(objNames){
         newContainer.appendChild(option);
 
     }   
+    
 }
 
+function filterSearch() {
+    let filter = input.value.toUpperCase();
+    let option = document.getElementsByTagName("option")
 
+    for (i = 0; i < option.length; i++){
+        let txtValue = option[i];
+        txtValue = txtValue.textContent || txtValue.innerText;
+        if(txtValue.toUpperCase().indexOf(filter) > -1){
+            option[i].style.display = "";
+        } else {
+            option[i].style.display = "none";
+        }
+    }
+
+}
