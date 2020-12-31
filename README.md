@@ -94,10 +94,10 @@ Sunday: N/A
 |Dec 18| Wireframes / Priority Matrix / Timeframes | Complete
 |Dec 21| Project Approval / HTML Setup / Basic CSS Setup | Complete
 |Dec 22| API Implementation / Test(Phase 1) Search Functionality / Test(Phase 2) Page Navigation | Complete
-|Dec 23| CSS Setup (Tablet and Mobile) | In Progress
-|Dec 24| CSS Setup con (Tablet and mobile) | Incomplete
-|Dec 25| Fine Tune CSS | Incomplete
-|Jan 4| MVP | Incomplete
+|Dec 23| CSS Setup (Tablet and Mobile) | Complete
+|Dec 24| CSS Setup con (Tablet and mobile) | Complete
+|Dec 25| Fine Tune CSS | Complete
+|Jan 4| MVP | Complete
 |Jan 5| Presentations | Incomplete
 
 ## Priority Matrix
@@ -108,13 +108,13 @@ Sunday: N/A
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML + JavaScript | M | 3-6hrs| N/A | N/A |
-| Basic CSS | M | 3hrs| N/A | N/A |
-| API Implementation | H | 6-9hrs| N/A | N/A |
-| Test(Phase 1 + Phase 2) | H | 3hrs| N/A | N/A |
-| CSS (Tablet and mobile) | L | 3hrs| N/A | N/A |
-| Advanced CSS | L | 6-9+ hrs| N/A | N/A |
-| Total | N/A | 27-35+ hrs| N/A | N/A |
+| HTML + JavaScript | M | 3-6hrs| 6hrs | 6hrs |
+| Basic CSS | M | 3hrs| 3hrs | 3hrs |
+| API Implementation | H | 6-9hrs| 9hrs | 9hrs |
+| Test(Phase 1 + Phase 2) | H | 3hrs| 3hrs | 3hrs |
+| CSS (Tablet and mobile) | L | 3hrs| 3hrs | 3hrs |
+| Advanced CSS | L | 6-9+ hrs| 9hrs | 9hrs |
+| Total | N/A | 27-35+ hrs| 35hrs | 35hrs |
 
 
 ## Code Snippet
