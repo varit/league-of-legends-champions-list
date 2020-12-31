@@ -131,6 +131,7 @@ input:focus {
 .button:hover {
     cursor: pointer;
 }
+
 .footer {
     display: flex;
     justify-content: center;
@@ -212,19 +213,26 @@ a.underline-left:hover::before {
 }
 .new-container {
     display: none;
-    border: 1px solid black;
     width: 500px;
     max-height: 500px;
     border: 1px solid rgba(0, 0, 0, .25);
     border-radius: 0 0 18px 18px;
-    padding: 5px 20px 5px 20px;
+    padding: 0;
     background-color: rgb(255, 255, 255);
     z-index: 1;
     cursor: pointer;
     box-shadow: 0 2px 5px rgb(135, 135, 135);
     border-top: 0;
-    overflow: scroll;
+    overflow-x: hidden;
 }
+option {
+    padding: 5px 5px 5px 20px;
+}
+option:hover {
+    cursor: pointer;
+    background-color: rgba(105, 191, 241, 0.6);
+}
+
 .show {
     display: block;
 }
@@ -271,10 +279,5 @@ a.underline-left:hover::before {
     .single-champs-image {
         width: 500px;
     }
-}
-
-#test {
-    display: flex;
-    flex-wrap: wrap;
 }
 
