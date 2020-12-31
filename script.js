@@ -1,8 +1,20 @@
-const input = document.querySelector("#search-input");
+const input = document.querySelector(".search-input");
+const searchBar = document.querySelector(".search-bar")
+const searchBarExt = document.querySelector(".search-bar-extend");
+const newContainer = document.querySelector(".new-container");
 const button = document.querySelector("button");
 const hamburger = document.querySelector(".hamburger");
+const body = document.querySelector("body"); 
 const navLogo =document.getElementById("nav-logo");
 const navSocial = document.getElementById("nav-social");
+
+
+newContainer.addEventListener("click", (e) => {
+    // console.log(e.target.value);
+    let selectSearch = e.target.value;
+    getChampsData(selectSearch);
+    removeChamps();
+})
 
 window.onscroll = function() {
     stickHeader();
@@ -10,6 +22,29 @@ window.onscroll = function() {
 const header = document.querySelector("header")
 
 let sticky = header.offsetTop;
+
+searchBar.addEventListener("click",(e) => {
+    searchBar.classList.toggle("search-bar-extend");
+    searchBar.classList.toggle("static-shadow");
+    newContainer.classList.toggle("show");
+    // searchBar.classList.toggle("dropdown");
+    // searchBar.classList.toggle("dropdown-content");
+    getOptions();
+})
+button.addEventListener("click",(e) =>{
+    e.preventDefault();
+    let inputText = input.value;
+    let capName = inputText.charAt(0).toUpperCase() + inputText.slice(1);
+    
+    champsName = capName;  
+    getChampsData(champsName);
+    removeChamps();
+});
+hamburger.addEventListener("click", (e) => {
+    navLogo.classList.toggle("show");
+    navSocial.classList.toggle("show");
+});
+
 
 function stickHeader(){
     if(window.pageYOffset > sticky){
@@ -19,20 +54,8 @@ function stickHeader(){
     } 
 
 }
-hamburger.addEventListener("click", (e) => {
-    navLogo.classList.toggle("show");
-    navSocial.classList.toggle("show");
-});
 
-button.addEventListener("click",(e) =>{
-    e.preventDefault();
-    let inputText = input.value;
-    let capName = inputText.charAt(0).toUpperCase() + inputText.slice(1);
 
-    champsName = capName;  
-    getChampsData(champsName);
-    removeChamps();
-});
 
 async function getChampsData(champsName){
     const champsUrl = `http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion/${champsName}.json`;
@@ -66,7 +89,8 @@ async function getAllChamps(){
     try {
         const response = await axios.get(champsUrl);
         let objNames = response.data.data;
-        getAllNames(objNames);
+        addAllNames(objNames);
+        getOptions(objNames);
     } catch(error){
         console.log(error);
     }
@@ -74,7 +98,7 @@ async function getAllChamps(){
 getAllChamps();
 
 
-function getAllNames(objNames){
+function addAllNames(objNames){
 
     let list = document.querySelector(".champions-container");
 
@@ -92,7 +116,6 @@ function getAllNames(objNames){
         `
         list.appendChild(champsDiv);
         
-
     }
     let champsBox = document.querySelectorAll(".champs-box img");
         champsBox.forEach((champsBox) => {
@@ -106,6 +129,7 @@ function getAllNames(objNames){
                 getChampsData(champsName);
             })
         })
+        
 }
 
 function removeChamps(){
@@ -114,3 +138,17 @@ function removeChamps(){
         removeChamps.removeChild(removeChamps.lastChild);
     }
 }
+
+function getOptions(objNames){
+    for(const property in objNames){
+        let name = property;
+
+        const option = document.createElement("option");
+        option.value = `${name}`;
+        option.textContent = `${name}`;
+        newContainer.appendChild(option);
+
+    }   
+}
+
+
