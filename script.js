@@ -8,18 +8,18 @@ const body = document.querySelector("body");
 const navLogo =document.getElementById("nav-logo");
 const navSocial = document.getElementById("nav-social");
 
+
 // Test
 const searchIcon = document.querySelector("#search-icon")
 const toggleDarkMode = document.querySelector(".button-dark-mode");
-const option = document.querySelectorAll("option");
+const champsContainer = document.querySelector(".champions-container")
 
 toggleDarkMode.addEventListener("click", (e) => {
+    champsContainer.classList.toggle("dark-mode");
     document.body.classList.toggle("dark-mode");
     newContainer.classList.toggle("dark-mode");
     input.classList.toggle("dark-mode");
     searchBar.classList.toggle("dark-mode");
-   
-
 })
 // End test
 newContainer.addEventListener("click", (e) =>{
@@ -43,7 +43,6 @@ searchBar.addEventListener("click",(e) => {
     getOptions();
 
 })
-// Replaced input with searchIcon
 searchIcon.addEventListener("click",(e) =>{
     e.preventDefault();
     let inputText = input.value;
@@ -112,9 +111,10 @@ function displayChamp(champsImage, champsName, champsLore){
     let champsDiv = document.createElement("div");
     champsDiv.setAttribute("class", "champs-box-single");
     champsDiv.innerHTML = `
-    <img class="single-champs-image" src="asset/splash/${champsImage}" alt="Image of ${champsName}"><div><h2 class="champs-title">${champsName}</h2></div><div class="champs-lore">${champsLore}</div>
+    <img class="single-champs-image" src="asset/splash/${champsImage}" alt="Image of ${champsName}"><div class="champs-title">${champsName}</div><div class="champs-lore">${champsLore}</div>
     `
     champsContainer.appendChild(champsDiv);
+    
 }
 
 async function getAllChamps(){
@@ -145,7 +145,7 @@ function addAllNames(objNames){
         let champsDiv = document.createElement("div");
         champsDiv.setAttribute("class", "champs-box");
         champsDiv.innerHTML = `
-        <div class="zoom"><img class="${champsName}" src="asset/loading/${champsImage}" alt="Image of ${champsName}"><h2 class="champImg">${champsName}</h2></div>
+        <div class="zoom"><img class="${champsName}" src="asset/loading/${champsImage}" alt="Image of ${champsName}"><h2 class="champs-img">${champsName}</h2></div>
         `
         list.appendChild(champsDiv);
         

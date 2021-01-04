@@ -15,14 +15,18 @@ body {
 h2 {
     color: rgb(255, 255, 255);
 }
+.single-champs-image {
+    border-radius: 0 50px 0 0;
+}
 .champs-title {
     margin-top: 20px;
     font-size: 50px;
-    color: black;
 }
 .champs-lore {
     text-align: left;
+    padding: 20px;
     margin: 50px auto 200px auto;
+    border-radius: 5px;
 }
 a {
     text-decoration: none;
@@ -142,7 +146,7 @@ input:focus {
     padding: 30px;
     background-color: #2699FB;
 }
-.champImg {
+.champs-img {
     width: 308px;
     height: 35px;
     margin-top: -30px;
@@ -157,7 +161,6 @@ input:focus {
     margin: 70px calc(10% - 30px);
     text-align: center;
 }
-
 .champs-box {
     clip-path: inset(20px 20px 0px 20px);
     margin: 20px;
@@ -173,8 +176,6 @@ input:focus {
 }
 .champs-box {
     border-radius: 0 150px 0 90px;
-
- 
 }
 .champs-box:hover {
     transition-duration: 1s;
@@ -241,20 +242,42 @@ option:hover {
     box-shadow: 0 2px 5px rgb(135, 135, 135);
 }
 /* Test */
-.button-dark-mode{
+.button-container {
     display: flex;
     justify-content: center;
     margin-top: 75px;
 }
-.dark-mode {
-    background-color: #0d1118;
+.button-dark-mode {
+    color: rgb(255, 255, 255);
+    background-color: #2699FB;
+    border: 0 solid rgba(0, 0, 0, .25);
+    padding: 8px;
+    border-radius: 30px;
+    
+}.button-dark-mode:focus {
+    outline: none;
 }
+.button-dark-mode:hover {
+    cursor: pointer;
+    /* background-color: #217ecf; */
+    box-shadow: 0 2px 5px rgb(135, 135, 135);
+}
+
 .search-bar.dark-mode {
     border-color: #21262d;
 }
 .new-container.dark-mode {
     color:rgb(251, 251, 251);
 }
+.champions-container.dark-mode {
+    border: none;
+    color: white;
+}
+.dark-mode {
+    background-color: #0d1118;
+    color: white;
+}
+
 
 /* End test */
 @media screen and (max-width: 1229px){
