@@ -85,7 +85,7 @@ input:focus {
     display: flex;
     justify-content: center;
     height: 35px;
-    margin: 150px 0 0 0;
+    margin: 75px 0 0 0;
 }
 .search-bar {
     display: flex;
@@ -240,6 +240,23 @@ option:hover {
 .static-shadow {
     box-shadow: 0 2px 5px rgb(135, 135, 135);
 }
+/* Test */
+.button-dark-mode{
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+.dark-mode {
+    background-color: #0d1118;
+}
+.search-bar.dark-mode {
+    border-color: #21262d;
+}
+.new-container.dark-mode {
+    color:rgb(251, 251, 251);
+}
+
+/* End test */
 @media screen and (max-width: 1229px){
     .top-nav {
         position: relative;

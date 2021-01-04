@@ -8,7 +8,20 @@ const body = document.querySelector("body");
 const navLogo =document.getElementById("nav-logo");
 const navSocial = document.getElementById("nav-social");
 
+// Test
+const searchIcon = document.querySelector("#search-icon")
+const toggleDarkMode = document.querySelector(".button-dark-mode");
+const option = document.querySelectorAll("option");
 
+toggleDarkMode.addEventListener("click", (e) => {
+    document.body.classList.toggle("dark-mode");
+    newContainer.classList.toggle("dark-mode");
+    input.classList.toggle("dark-mode");
+    searchBar.classList.toggle("dark-mode");
+   
+
+})
+// End test
 newContainer.addEventListener("click", (e) =>{
     let selectSearch = e.target.value;
     getChampsData(selectSearch);
@@ -30,7 +43,8 @@ searchBar.addEventListener("click",(e) => {
     getOptions();
 
 })
-button.addEventListener("click",(e) =>{
+// Replaced input with searchIcon
+searchIcon.addEventListener("click",(e) =>{
     e.preventDefault();
     let inputText = input.value;
     let capName = inputText.charAt(0).toUpperCase() + inputText.slice(1);
