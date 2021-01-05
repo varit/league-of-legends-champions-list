@@ -92,7 +92,7 @@ function stickHeader(){
 }
 // Get champions data given champions name
 async function getChampsData(champsName){
-    const champsUrl = `http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion/${champsName}.json`;
+    const champsUrl = `https://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion/${champsName}.json`;
     try {
         const response = await axios.get(champsUrl);
         const dotJpeg = "_0.jpg";
@@ -121,7 +121,7 @@ function displayChamp(champsImage, champsName, champsLore){
 }
 // Get all champions data from API endpoint
 async function getAllChamps(){
-    const champsUrl = `http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion.json`;
+    const champsUrl = `https://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion.json`;
     try {
         const response = await axios.get(champsUrl);
         let objNames = response.data.data;
