@@ -52,7 +52,7 @@ League of Legends Champions List (LoLCL)
 
 ## Post-MVP
 - Fine tune CSS
-- Autocomplete search bar
+- Filter search bar
 - Champions (additional) Skins 
 - Basic info (Attack, defense, magic, difficulty) displayed using animated graph
 - Ally tips
@@ -119,8 +119,19 @@ Sunday: N/A
 
 ## Code Snippet
 
-N/A
-
+.champs-box {
+    clip-path: inset(20px 20px 0px 20px);
+    margin: 20px;
+    max-width: 308px;
+    max-height: 592px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.champs-box:hover .zoom,
+.champs-box:focus .zoom {
+    transform: scale(.95);
+    transition-duration: 500ms;
+}
 ## Change Log
 
-N/A
+Change from autocomplete search to filter search
