@@ -86,7 +86,7 @@ Sunday: N/A
 
 ### Week 2(Post MVP)
 - Advanced CSS
-- Autocomplete search bar
+- Filter search bar
 - Add extra data
 
 |  Day | Deliverable | Status
