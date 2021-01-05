@@ -6,7 +6,7 @@ League of Legends Champions List (LoLCL)
 
 ## Project Description
 - The LoLCL will display images of all LoL champions in a single page. 
-- Each images is clickable to load and open up a new page displaying that champions 1. Image 2.Name 3. Brief description
+- Each images is clickable to load and open up champions own page, displaying that champions image, name and lore/brief description
 
 ## API:
 - http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion.json
