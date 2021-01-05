@@ -13,7 +13,7 @@ body {
     position: relative;
 }
 h2 {
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
 }
 .single-champs-image {
     border-radius: 0 50px 0 0;
@@ -30,7 +30,7 @@ h2 {
 }
 a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
     margin-right: 20px;
     
 }
@@ -77,7 +77,7 @@ ul {
     flex-wrap: wrap;
     list-style-type: none;
     border-width: 100%; 
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
     background-color: #2699FB;
     font-size: 20px;
 }
@@ -97,11 +97,11 @@ input:focus {
 .search-bar {
     display: flex;
     margin: 0 50px 0 50px;
-    border: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid #00000042;
     width: 500px;
     border-radius: 30px;
     padding: 5px 20px 5px 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFFFF;
     
 }
 .search-bar-extend {
@@ -111,10 +111,10 @@ input:focus {
     display: flex;
     width: 500px;
     height: 500px;
-    border: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid #000000;
     border-radius: 17px;
     padding: 5px 20px 5px 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFFFF;
     z-index: 1;
 }
 .search-input {
@@ -126,7 +126,7 @@ input:focus {
 }
 .search-bar:hover {
     cursor: pointer;
-    box-shadow: 0 2px 5px rgb(135, 135, 135);
+    box-shadow: 0 2px 5px #878787;
 }
 .button {
     height: 22px;
@@ -144,7 +144,7 @@ input:focus {
     justify-content: center;
     flex-shrink: 0;
     border-width: 100%; 
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
     padding: 30px;
     background-color: #2699FB;
 }
@@ -214,13 +214,13 @@ a.underline-left:hover::before {
     display: none;
     width: 500px;
     max-height: 500px;
-    border: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid #000000;
     border-radius: 0 0 18px 18px;
     padding: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFFFF;
     z-index: 1;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgb(135, 135, 135);
+    box-shadow: 0 2px 5px #878787;
     border-top: 0;
     overflow-x: hidden;
 }
@@ -229,14 +229,14 @@ option {
 }
 option:hover {
     cursor: pointer;
-    background-color: rgba(105, 191, 241, 0.6);
+    background-color: #69bff19a;
 }
 
 .show {
     display: block;
 }
 .static-shadow {
-    box-shadow: 0 2px 5px rgb(135, 135, 135);
+    box-shadow: 0 2px 5px #878787;
 }
 .button-container {
     display: flex;
@@ -244,9 +244,9 @@ option:hover {
     margin-top: 75px;
 }
 .button-dark-mode {
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
     background-color: #2699FB;
-    border: 0 solid rgba(0, 0, 0, .25);
+    border: 0 solid #000000;
     padding: 8px;
     border-radius: 30px;
     
@@ -255,14 +255,14 @@ option:hover {
 }
 .button-dark-mode:hover {
     cursor: pointer;
-    box-shadow: 0 2px 5px rgb(135, 135, 135);
+    box-shadow: 0 2px 5px #878787;
 }
 
 .search-bar.dark-mode {
     border-color: #21262d;
 }
 .new-container.dark-mode {
-    color:rgb(251, 251, 251);
+    color:#FBFBFB;
 }
 .champions-container.dark-mode {
     border: none;
