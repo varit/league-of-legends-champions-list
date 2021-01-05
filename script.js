@@ -33,9 +33,9 @@ window.onscroll = function() {
 }
 // Event toggling search bar extension and dropdown search list
 searchBar.addEventListener("click",(e) => {
-    searchBar.classList.toggle("search-bar-extend");
-    searchBar.classList.toggle("static-shadow");
-    newContainer.classList.toggle("show");
+    searchBar.classList.add("search-bar-extend");
+    searchBar.classList.add("static-shadow");
+    newContainer.classList.add("show");
     e.stopPropagation();
     getOptions();
 })
@@ -72,11 +72,14 @@ body.addEventListener("click",(e) => {
     searchBar.classList.remove("search-bar-extend");
     searchBar.classList.remove("static-shadow");
     newContainer.classList.remove("show");
+    navLogo.classList.remove("show");
+    navSocial.classList.remove("show");
 })
 // Toggle mobile menu bar
 hamburger.addEventListener("click", (e) => {
     navLogo.classList.toggle("show");
     navSocial.classList.toggle("show");
+    e.stopPropagation();
 });
 // Anchor header/navbar to top of page
 function stickHeader(){
