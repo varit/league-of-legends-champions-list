@@ -98,7 +98,7 @@ Sunday: N/A
 |Dec 24| CSS Setup con (Tablet and mobile) | Complete
 |Dec 25| Fine Tune CSS | Complete
 |Jan 4| MVP | Complete
-|Jan 5| Presentations | Incomplete
+|Jan 5| Presentations | Complete
 
 ## Priority Matrix
 
