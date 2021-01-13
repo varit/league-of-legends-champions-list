@@ -214,7 +214,6 @@ a.underline-left:hover::before {
     display: none;
     width: 500px;
     max-height: 500px;
-    border: 1px solid #000000;
     border-radius: 0 0 18px 18px;
     padding: 0;
     background-color: #FFFFFF;
